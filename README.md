@@ -6,4 +6,6 @@ Chunkify is a task list with a twist: AI breaks down your tasks into smaller chu
 
 # Current Status: In Development
 
-Chunkify is passion project of mine. It's an idea that I have had for a while now, and the project came to fruition at the AI Hackathon @ CSUS](https://lu.ma/o2sau79c) in March 2024, and I plan to continue development until the app is in a complete, releasable state.
+Chunkify is passion project of mine. It's an idea that I have had for a while now - I've always wanted an app to further optimize everything I do.
+
+The project came to fruition at the [AI Hackathon @ CSUS](https://lu.ma/o2sau79c) in March 2024, and I plan to continue development until the app is in a complete, releasable state.
