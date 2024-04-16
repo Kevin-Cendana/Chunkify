@@ -68,8 +68,8 @@ html {
 
 /* App Logo */
 .app-logo {
-  aspect-ratio: 1/1.2;
-  width: clamp(30px, 8vw, 70px);
+  height: clamp(44px, 8vw, 70px);
+  width: clamp(44px, 8vw, 70px);
   margin-left: clamp(12px, 2vw, 25px);
   padding: 0px;
 }
@@ -117,6 +117,11 @@ html {
   margin-top: 16px;
   gap: 20px;
 }
+@media(max-width: 520px) {
+  .main-page {
+    flex-direction: column;
+  }
+}
 
 /* Main Page - Both Sides */
 .main-left, .main-right {
@@ -125,7 +130,6 @@ html {
   align-items: flex-start;
   justify-content: flex-start;
   height: 100%;
-  min-height: 600px;
   border-radius: 10px;
   padding: 20px;
 }
