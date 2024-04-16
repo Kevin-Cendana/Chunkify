@@ -309,7 +309,7 @@ function Body() {
     else {
         return (
             <div className="login-page">
-                    <h2 className="app-slogan">Where tasks meet their match. One chunk at a time.</h2>
+                    <h2 className="app-slogan">Where tasks meet their match. <br className="mobile-only"></br>One chunk at a time.</h2>
                     <button className="google-sign-in-button" onClick={() => loginWithRedirect({ connection: 'google-oauth2' })}>
                     <img src={GoogleLogo} className="google-logo" alt="Google Logo" />
                     Sign In with Google
