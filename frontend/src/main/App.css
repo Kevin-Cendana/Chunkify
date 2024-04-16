@@ -12,6 +12,7 @@
 
 html { 
   font-size: 62.5%; /* REM Trick: 1rem = 10px */
+  box-sizing: border-box;
 } 
 
 * {
@@ -22,6 +23,7 @@ html {
   font-family: "SF Pro";
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .mobile-only {
@@ -34,7 +36,8 @@ html {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background-color: white;
 }
 
@@ -45,7 +48,6 @@ html {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  margin-top: 10%;
 }
 
 /* App Title */
@@ -55,7 +57,7 @@ html {
   padding: 0;
   font-family: 'SF Pro', sans-serif;
   font-weight: 300;
-  font-size: clamp(3.7rem, 5vw, 7rem);
+  font-size: clamp(3rem, 5vw, 7rem);
 } 
 
 /* App Header - Title & Logo */
@@ -63,13 +65,14 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: clamp(10px, 3vw, 20px);
+  margin-top: clamp(30px, 5vw, 50px);
+  margin-bottom: clamp(8px, 2vw, 16px);
 }
 
 /* App Logo */
 .app-logo {
-  height: clamp(44px, 8vw, 70px);
-  width: clamp(44px, 8vw, 70px);
+  height: clamp(44px, 7.5vw, 70px);
+  width: clamp(44px, 7.5vw, 70px);
   margin-left: clamp(12px, 2vw, 25px);
   padding: 0px;
 }
@@ -110,17 +113,11 @@ html {
 /* Main Page */
 .main-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin-top: 16px;
-  gap: 20px;
-}
-@media(max-width: 520px) {
-  .main-page {
-    flex-direction: column;
-  }
+  gap: clamp(10px, 3vw, 20px);
 }
 
 /* Main Page - Both Sides */
@@ -129,6 +126,7 @@ html {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 90%;
   height: 100%;
   border-radius: 10px;
   padding: 20px;
@@ -138,14 +136,11 @@ html {
 .main-left {
   display: flex;
   height: 100%; 
-  width: 400px;
-  transform: translateX(40px);
+  width: 100%;
 }
 
 /* Main Page - Right Side */
 .main-right {
-  margin-top: 35px;
-  width: 500px;
   background-color: var(--imessage-gray);
 }
 
@@ -167,8 +162,8 @@ input {
   padding: 4px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 30px;
-}
+  font-size: clamp(1.5rem, 3.1vw, 2.5rem);
+  }
   /* Input Text Fields - Placeholder */
   .input-field::placeholder {
     color: rgb(162, 162, 162);
@@ -226,14 +221,8 @@ input {
   }
 
 /* User Tasks Container */
-.user-tasks {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  border-radius: 16px;
-  margin-top: 20px;
-  padding: 15px;
+.user-task {
+  font-size: clamp(2rem, 2.5vw, 3.5rem);
 }
 
 /* Wrapper for User Task List & Delete Button */
@@ -253,21 +242,23 @@ ol.user-task-list {
   margin: 20px 0;
   padding: 0;
   list-style-type: none;
-  font-size: 32px;
+  font-size: clamp(2.8rem, 2.5vw, 3.5rem);
 }
 
 /* User Task Delete Button */
 .user-task-delete-button {
   aspect-ratio: 1/1;
-  width: 38px;
-  padding: 10px;
+  width: clamp(25px, 3vw, 35px);
+  padding: clamp(4px, .5vw, 6px) clamp(4px, .5vw, 6px);
   border: none;
-  border-radius: 20px;
+  border-radius: 50%;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--delete-red);
   font-family: "SF Pro";
   font-weight: 900;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  margin-left: clamp(5px, 1vw, 10px);
   color:white;
 }
 
@@ -297,7 +288,7 @@ li.user-task:before {
 .main-right h2 {
   display: flex;
   align-self: center;
-  font-size: 28px;
+  font-size: clamp(1.5rem, 3.5vw, 4rem);
   margin-top: 5px;
 }
 
@@ -323,7 +314,7 @@ li.user-task:before {
 .submit-button {
   aspect-ratio: 1/1;
   margin-left: 10px;
-  width: 45px;
+  width: clamp(30px, 1vw, 40px);
   border: none;
   background-image: url('../images/send-icon.png');
   background-size: contain;
@@ -426,12 +417,13 @@ li.ai-task:before {
   /* Google Profile Picture */
   .google-profile-picture {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    /* top: 10px;
+    right: 10px; */
+    top: clamp(5px, 0.5vw, 10px);
+    right: clamp(5px, 0.5vw, 10px);
     aspect-ratio: 1/1;
-    width: 50px;
+    width: clamp(40px, 5vw, 50px);
     border: 4px solid rgb(207, 207, 207);
     border-radius: 50%;
-    margin-right: 10px;
   }
 
